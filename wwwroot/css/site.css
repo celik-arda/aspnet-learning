@@ -1,0 +1,84 @@
+html {
+  font-size: 14px;
+  color: white !important;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+
+/* EKLENENLER */
+
+body {
+    background-color: #1e2022;
+}
+
+nav {
+    background-color: #25282a;
+    height: 60px;
+    border: 0.1px solid #555555;
+}
+
+
+
+li a {
+    text-decoration: none;
+    color: white !important;
+    background-color: #0a0a1d;
+    transition: all, 0.3ms ease-out;
+}
+
+/* geçici */
+.offcanvas-header button {
+    background-color: white !important;
+}
+
+svg path {
+    fill: white !important;
+}
+
+li a:hover {
+    background-color: transparent;
+    color: #0a0a1d;
+}
+
+.register_form_container {
+    background-color: #25282a;
+    border-radius: 10px;
+}
+.login_form_container {
+    background-color: #25282a;
+    border-radius: 10px;
+}
+
+form button {
+    background-color: #FF3B00;
+}
+
+form label {
+    color: white;
+}
+
+h2 {
+    color: #FF3B00 !important;
+}
+
+.website-icon {
+    background: linear-gradient(to right, #0a0a1d,#a2a8d3);
+    border-radius: 10px;
+}
