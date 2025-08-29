@@ -176,3 +176,4 @@ C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\refint\form-task-arda
 C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-task-arda.pdb
 C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-task-arda.genruntimeconfig.cache
 C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\ref\form-task-arda.dll
+C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-task-arda.sourcelink.json

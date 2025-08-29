@@ -39,7 +39,6 @@ nav {
 li a {
     text-decoration: none;
     color: white !important;
-    background-color: #0a0a1d;
     transition: all, 0.3ms ease-out;
 }
 
@@ -52,10 +51,10 @@ svg path {
     fill: white !important;
 }
 
-li a:hover {
+/* li a:hover {
     background-color: transparent;
     color: #0a0a1d;
-}
+} */
 
 .register_form_container {
     background-color: #25282a;
@@ -78,7 +77,31 @@ h2 {
     color: #FF3B00 !important;
 }
 
-.website-icon {
-    background: linear-gradient(to right, #0a0a1d,#a2a8d3);
-    border-radius: 10px;
+.navbar-canvas-menu {
+    background-color: #25282a;
+    width: 18%;
+}
+.bi-caret-down path {
+    fill: white;
+}
+
+.nav-canvas-icon {
+    height: 38px;
+}
+
+.nav-search-input {
+    background-color: #25282a;
+    position: relative !important;
+
+}
+
+.nav-search-input span {
+    position: absolute !important;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+}
+
+.nav-search-input path {
+    fill: white !important;
 }
