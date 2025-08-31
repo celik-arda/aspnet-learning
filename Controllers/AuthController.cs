@@ -48,6 +48,11 @@ namespace form_task_arda.Controllers
         [HttpPost]
         public async Task<IActionResult> Register_Form(RegisterFormDto myFormResult)
         {
+            // Bilgiler Modeldeki kurallara uymazsa... //
+            if (!ModelState.IsValid)
+            {
+                return View("Process_Failed");
+            }
 
             // kullanıcıyı oluşturuyorum (şifresi hariç)
             var _user = new AppUser

@@ -13,17 +13,19 @@ builder.Services.AddControllersWithViews();
 
 
 
-// 1- Database için gerekli importu yap //
+// 1- Database iï¿½in gerekli importu yap //
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2- Identity için gerekli importu yap //
+// 2- Identity iï¿½in gerekli importu yap //
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 {
-    options.Password.RequireDigit = false; // Þifre kurallarý
+    // password kurallarÄ±nÄ± options (identity) Ã¼zerinden oluÅŸturuyorum
+    options.Password.RequireDigit = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequiredLength = 6;
+
 })
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();

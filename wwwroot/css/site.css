@@ -95,11 +95,11 @@ h2 {
 
 }
 
-.nav-search-input span {
+.nav-search-icon {
     position: absolute !important;
-    top: 10%;
-    left: 10%;
-    bottom: 10%;
+    top: 2%;
+    left: 1%;
+    bottom: 2%;
 }
 
 .nav-search-input path {
