@@ -1,13 +1,16 @@
+:root {
+  color: white !important;
+}
 html {
   font-size: 14px;
   color: white !important;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     html {
         font-size: 16px;
     }
-}
+} */
 
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -26,6 +29,7 @@ html {
 
 body {
     background-color: #1e2022;
+    color: white !important;
 }
 
 nav {
@@ -92,7 +96,12 @@ h2 {
 .nav-search-input {
     background-color: #25282a;
     position: relative !important;
+}
 
+.nav-search-input:focus {
+    background-color: #1e2022;
+    outline: 3px solid grey;
+    border: none;
 }
 
 .nav-search-icon {

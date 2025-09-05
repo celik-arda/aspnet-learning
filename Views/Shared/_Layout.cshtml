@@ -19,8 +19,8 @@
 <body>
     <header>
 
-        <nav class="navbar box-shadow">
-            <div class="container-fluid d-flex justify-content-start">
+        <nav class="navbar-nav box-shadow">
+            <div class="container-fluid d-flex justify-content-start align-items-center">
 
                 <a class="navbar-brand website-icon" asp-for="Index">
                     <img id="website_big_icon" src="~/images/front_big_logo.svg" alt="Firma Logosu" height="34" class="d-inline-block justify-content-between">
@@ -35,12 +35,12 @@
                 </a>
                 </button>
 
-                <div class="navbar col-6">
+                <div class="navbar col-6 ms-5">
                     <form class="d-flex" role="search">
                         <div class="position-relative">
                             <input class="form-control ps-5 me-2 nav-search-input" type="search" placeholder="Search in front" aria-label="Search"/>
                             <span class="nav-search-icon">
-                                <a class="btn">
+                                <a class="btn text-left">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                                     </svg>
@@ -50,7 +50,7 @@
                     </form>
                 </div>
 
-                <div class="col-3 offcanvas show offcanvas-start navbar-canvas-menu"  id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="col-4 offcanvas show offcanvas-start navbar-canvas-menu"  id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
                         <span><img class="nav-canvas-icon" src="~/images/front_small_logo.svg" alt=""></span>
 
@@ -59,7 +59,7 @@
 
                     </div>
 
-                    @* (Start) Navbar Options *@
+                    @* (Start) Navbar List *@
                     <div class="offcanvas-body">
                         <h3 class="nav-heading px-2 text-white h6 fw-bold">PAGES</h3>
 
@@ -102,7 +102,7 @@
                             </li>
                         </ul>
                     </div>
-                    @* (End) Navbar Options *@
+                    @* (End) Navbar List *@
                 </div>
 
             </div>
