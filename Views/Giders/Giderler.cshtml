@@ -1,0 +1,28 @@
+﻿@using form_task_arda.DTOs;
+@using form_task_arda.Models;
+@using form_task_arda.Data;
+@model List<GiderlerDTO>;
+
+
+@* <h1>Burası giderlerin olduğu sayfa</h1> *@
+
+<div class="container">
+    <ul class="giders_list_area list-group list-group-horizontal">
+        @foreach (var item in Model)
+        {
+            <li class="giders_list_element list-group-item d-flex justify-between container">
+                <div class="col-3">@item.Gider_Adi</div>
+                <div class="col-3">@item.Gider_Kategorisi</div>
+                <div class="col-3">@item.Gider_Ucreti TL</div>
+                <div class="col-3">
+                    @{
+                        int kacGunOnce = (DateTime.Today.Date - @item.Gider_Tarihi.Date).Days;
+                    }
+                    
+                    @kacGunOnce gün önce
+                </div>
+            </li>
+
+        }
+    </ul>
+</div>

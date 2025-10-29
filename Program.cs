@@ -1,9 +1,12 @@
 using form_task_arda.Data;
+using form_task_arda.DTOs;
+using form_task_arda.MapperProfiles;
 using form_task_arda.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +34,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 .AddDefaultTokenProviders();
 
 
+// AUTOMAPPER IMPORT  //
+builder.Services.AddAutoMapper(typeof(MyAllMappers));
+
+// WARNING :  don't forget import services and libraries at early lines, you CANNOT add services after "Build();" line. If you do, throw error "it's read-only". 
 
 var app = builder.Build();
 
@@ -41,6 +48,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
 
 app.UseStaticFiles();
 

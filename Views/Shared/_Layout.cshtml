@@ -19,7 +19,7 @@
 <body>
     <header>
 
-        <nav class="navbar-nav box-shadow">
+        <nav class="navbar box-shadow">
             <div class="container-fluid d-flex justify-content-start align-items-center">
 
                 <a class="navbar-brand website-icon" asp-for="Index">
@@ -35,20 +35,20 @@
                 </a>
                 </button>
 
-                <div class="navbar col-6 ms-5">
+                @* <div class="navbar col-6 ms-5">
                     <form class="d-flex" role="search">
                         <div class="position-relative">
                             <input class="form-control ps-5 me-2 nav-search-input" type="search" placeholder="Search in front" aria-label="Search"/>
                             <span class="nav-search-icon">
-                                <a class="btn text-left">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <a class="btn text-left search-button-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                                     </svg>
                                 </a>
                             </span>
                         </div>
                     </form>
-                </div>
+                </div> *@
 
                 <div class="col-4 offcanvas show offcanvas-start navbar-canvas-menu"  id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
@@ -61,20 +61,20 @@
 
                     @* (Start) Navbar List *@
                     <div class="offcanvas-body">
-                        <h3 class="nav-heading px-2 text-white h6 fw-bold">PAGES</h3>
+                        <h3 class="nav-heading px-2 text-white h6 fw-bold">SEÇENEKLER</h3>
 
                         <ul class="navbar-nav gap-2">
                             <li class="nav-item px-4">
                                 <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item px-4">
-                                <a class="nav-link" asp-controller="Home" asp-action="Index">Users</a>
+                                <a class="nav-link" asp-controller="Giders" asp-action="Giderler">Giderler</a>
                             </li>
                             <li class="nav-item px-4">
-                                <a class="nav-link" asp-controller="Home" asp-action="Index">User Profile</a>
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">Tedarikçiler</a>
                             </li>
                             <li class="nav-item px-4">
-                                <a class="nav-link" asp-controller="Home" asp-action="Index">Account</a>
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">Hesabım</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link ps-4" href="#authMenu" data-bs-toggle="collapse" role="button">Authentication

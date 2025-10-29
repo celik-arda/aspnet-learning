@@ -8,6 +8,9 @@ namespace form_task_arda.Data
 {
     public class ApplicationDbContext: IdentityDbContext<AppUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
+        }
+
+        public DbSet<GiderlerModel>Gider_Table { get; set; }
     }
 }
