@@ -44,6 +44,28 @@ namespace form_task_arda.Controllers
 		}
 
 
+
+		public IActionResult RemoveThisGider (int _id)
+		{
+			var deletingGider = __db.Gider_Table.FirstOrDefault(e => e.Gider_Id == _id);
+
+			if (deletingGider == null)
+			{
+				TempData["Error"] = "Element bulunamadı";
+
+
+			}
+
+
+				__db.Gider_Table.Remove(deletingGider);
+				__db.SaveChanges();
+				
+				return RedirectToAction("Giderler"); 
+
+
+		}
+
+
 		public IActionResult Giderler()
 		{
 			var giderlerim = __db.Gider_Table.ToList();

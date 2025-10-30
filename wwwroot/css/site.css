@@ -158,17 +158,30 @@ h2 {
     display: flex;
     align-items: center;
     line-height: 100%;
-    font-size: 2em;
+    font-size: 1.8em;
     border-left: 2px solid gray;
     color: white;
 }
 
-.giders_list_element div:first-child {
-    border-left: none !important;
-}
+/*.giders_list_element div:last-child {
+     border-left: none !important;
+ }*/
 
 .add_gider_container {
     min-width: 33%;
     background-color: #25282a;
     border-radius: 10px;
+}
+
+.gider_remove_icon path {
+    fill: #dc3545 !important;
+}
+
+.gider_edit_icon path {
+    fill: #007bff !important;
+}
+
+.gider_button_area {
+    width : 40%;
+    height: 100%;
 }

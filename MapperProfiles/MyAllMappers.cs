@@ -19,8 +19,8 @@ namespace form_task_arda.MapperProfiles
 
 			CreateMap<GiderlerDTO, GiderlerModel>()
 				.ForMember(dest => dest.Gider_Maliyeti, opt => opt.MapFrom(e => e.Gider_Ucreti))
-				.ForMember(dest => dest.Gider_Tedarikcisi, opt => opt.Ignore())
-				.ForMember(dest => dest.Gider_Id, opt => opt.Ignore());
+				.ForMember(dest => dest.Gider_Tedarikcisi, opt => opt.Ignore());
+				//.ForMember(dest => dest.Gider_Id, opt => opt.Ignore());
 		}
 	}
 }
