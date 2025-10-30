@@ -1,0 +1,26 @@
+﻿@using form_task_arda.Models;
+@using form_task_arda.DTOs;
+@model GiderlerDTO;
+
+
+    <div class="add_gider_container container col-xl-4 col-lg-4 col-10 mx-auto text-center mt-5 p-5">
+
+        <h2 class="text-primary mb-3">Add New</h2>
+
+        <form method="post" asp-controller="Giders" asp-action="AddNewGider" class="add_gider_form d-flex flex-column gap-2">
+            <div class="form-group">
+                <label for="gider_adi">Gider Adı</label>
+                <input asp-for="Gider_Adi" type="text" class="form-control" id="gider_adi">
+                @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> *@
+            </div>
+            <div class="form-group">
+                <label for="gider_kategorisi">Gider Kategorisi</label>
+                <input asp-for="Gider_Kategorisi" type="text" class="form-control" id="gider_kategorisi">
+            </div>            
+            <div class="form-group">
+                <label for="gider_ucreti">Gider bedeli (TL)</label>
+                <input asp-for="Gider_Ucreti" type="number" class="form-control" id="gider_ucreti">
+            </div>            
+            <button type="submit" class="btn btn-primary w-50 m-auto mt-3">Add New</button>
+        </form>
+    </div>

@@ -146,25 +146,29 @@ h2 {
     transform: translateX(-50%);
 }
 
-
-
 .giders_list_element {
     background-color: black;
     height: 3em;
-    outline: 4px solid aqua;
-    border-bottom-left-radius: 0.4em !important;
+    margin-bottom: 10px;
+    border-radius: 0.5em !important;
 }
 
-    .giders_list_element div {
-        padding: 0 1em;
-        display: flex;
-        align-items: center;
-        line-height: 100%;
-        font-size: 2em;
-        border-left: 2px solid gray;
-        color: white;
-    }
+.giders_list_element div {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    font-size: 2em;
+    border-left: 2px solid gray;
+    color: white;
+}
 
-    .giders_list_element div:first-child {
-        border-left: none;
-    }
+.giders_list_element div:first-child {
+    border-left: none !important;
+}
+
+.add_gider_container {
+    min-width: 33%;
+    background-color: #25282a;
+    border-radius: 10px;
+}

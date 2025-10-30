@@ -21,7 +21,7 @@ namespace form_task_arda.Models
 		[Required]
 		public int Gider_Maliyeti { get; set; }
 		[Required]
-		public string Gider_Tedarikcisi { get; set; }
+		public string Gider_Tedarikcisi { get; set; } = "Belirtilmedi";
 		public DateTime? Gider_Tarihi {  get; set; }
 
 	}

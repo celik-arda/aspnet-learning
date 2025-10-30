@@ -21,6 +21,29 @@ namespace form_task_arda.Controllers
 			__mapper = _mapper;										  
 		}
 
+
+		[HttpGet]
+		public IActionResult AddNewGider ()
+		{
+			return View();
+		}
+
+
+		[HttpPost]
+		public IActionResult AddNewGider (GiderlerDTO _newGider)
+		{
+
+			_newGider.Gider_Tarihi = DateTime.Today;
+
+			var _newGiderModel = __mapper.Map<GiderlerModel>(_newGider);
+
+			__db.Gider_Table.Add(_newGiderModel);
+			__db.SaveChanges();
+
+			return View();
+		}
+
+
 		public IActionResult Giderler()
 		{
 			var giderlerim = __db.Gider_Table.ToList();
