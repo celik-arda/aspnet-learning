@@ -45,6 +45,33 @@ namespace form_task_arda.Controllers
 
 
 
+		public IActionResult DisplayEditingGider (int _editId)
+		{
+			var displayingItem = __db.Gider_Table.FirstOrDefault(e => e.Gider_Id == _editId);
+
+			if (displayingItem == null)
+			{
+				return NotFound();
+			}
+
+			var editingGiderDTO = __mapper.Map<GiderlerDTO>(displayingItem);
+
+			return PartialView("_EditGiderPopUp", editingGiderDTO);
+		}
+
+		[HttpPost]
+		public IActionResult UpdateGider (GiderlerDTO updatedGider)
+		{
+			var updatedGiderModel = __mapper.Map<GiderlerModel>(updatedGider);
+
+			__db.Gider_Table.Update(updatedGiderModel);
+			__db.SaveChanges();
+
+			return RedirectToAction("Giderler");
+		}
+
+
+
 		public IActionResult RemoveThisGider (int _id)
 		{
 			var deletingGider = __db.Gider_Table.FirstOrDefault(e => e.Gider_Id == _id);
