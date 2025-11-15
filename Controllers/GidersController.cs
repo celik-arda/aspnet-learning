@@ -3,6 +3,7 @@ using form_task_arda.Data;
 using form_task_arda.DTOs;
 using form_task_arda.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace form_task_arda.Controllers
@@ -30,6 +31,7 @@ namespace form_task_arda.Controllers
 
 
 		[HttpPost]
+		//[Authorize(Roles = "Admin")]
 		public IActionResult AddNewGider (GiderlerDTO _newGider)
 		{
 
@@ -60,8 +62,11 @@ namespace form_task_arda.Controllers
 		}
 
 		[HttpPost]
+		[Authorize(Roles = "Admin")]
 		public IActionResult UpdateGider (GiderlerDTO updatedGider)
 		{
+
+			updatedGider.Gider_Tarihi = DateTime.Today;
 			var updatedGiderModel = __mapper.Map<GiderlerModel>(updatedGider);
 
 			__db.Gider_Table.Update(updatedGiderModel);
@@ -72,6 +77,7 @@ namespace form_task_arda.Controllers
 
 
 
+		[Authorize(Roles = "Admin")]
 		public IActionResult RemoveThisGider (int _id)
 		{
 			var deletingGider = __db.Gider_Table.FirstOrDefault(e => e.Gider_Id == _id);
