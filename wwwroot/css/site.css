@@ -71,23 +71,19 @@ svg path {
     fill: white !important;
 }
 
-/* li a:hover {
-    background-color: transparent;
-    color: #0a0a1d;
-} */
 
 .register_form_container {
     background-color: #25282a;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 .login_form_container {
     background-color: #25282a;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .editing_popup_container {
     background-color: #25282a;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 form button {
@@ -98,7 +94,7 @@ form label {
     color: white;
 }
 
-h2 {
+modal-header h2 {
     color: #FF3B00 !important;
 }
 
@@ -142,7 +138,7 @@ h2 {
 
 .hero_section_container {
     height: 6em;
-    border-radius: 0.6em;
+    border-radius: 7px;
     overflow: hidden;
     align-items: center;
     text-align: center;
@@ -167,7 +163,7 @@ h2 {
     background-color: black;
     height: 3em;
     margin-bottom: 10px;
-    border-radius: 0.5em !important;
+    border-radius: 7px !important;
 }
 
 .giders_list_element div {
@@ -187,7 +183,7 @@ h2 {
 .add_gider_container {
     min-width: 33%;
     background-color: #25282a;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .gider_remove_icon path {
@@ -209,3 +205,25 @@ h2 {
     z-index: 999;
     background-color: red;
 }*/
+
+.all_page_links_container {
+    height: 150px;
+}
+
+.home_boxes {
+    text-align: center;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.total_user_box {
+    background-color: #f56954;
+}
+
+.total_gider_box {
+    background-color: #00c0ef;
+}
+
+.total_company_box {
+    background-color: #0073b7;
+}

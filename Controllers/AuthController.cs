@@ -67,6 +67,7 @@ namespace form_task_arda.Controllers
 
             if (_registerResult.Succeeded)
             {
+                await _userManager.AddToRoleAsync(_user, "Admin");
                 return RedirectToAction("Form_Done");
             }
 

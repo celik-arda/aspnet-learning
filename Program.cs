@@ -18,7 +18,7 @@ builder.Services.AddControllersWithViews();
 
 // 1- Database i�in gerekli importu yap //
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+	options.UseSqlServer(@"Server=ARDA_DEV\SQLEXPRESS;Database=My_Form_DB;User Id=sa;Password=111111;TrustServerCertificate=true;"));
 
 // 2- Identity i�in gerekli importu yap //
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>

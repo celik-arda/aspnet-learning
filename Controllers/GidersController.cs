@@ -2,8 +2,10 @@
 using form_task_arda.Data;
 using form_task_arda.DTOs;
 using form_task_arda.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace form_task_arda.Controllers
@@ -14,12 +16,51 @@ namespace form_task_arda.Controllers
 		private readonly ApplicationDbContext __db;
 		private readonly IMapper __mapper;
 
+		private readonly UserManager<AppUser> _userManager;
+		private readonly SignInManager<AppUser> _signInManager;
+
 
 		// that s my all returned db-content from service //
-		public GidersController(ApplicationDbContext _db, IMapper _mapper)
+		public GidersController(ApplicationDbContext _db, IMapper _mapper, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
 		{
 			__db = _db;
-			__mapper = _mapper;										  
+			__mapper = _mapper;
+			_userManager = userManager;
+			_signInManager = signInManager;
+		}
+
+
+		[Route("/db-test")]
+		public IActionResult DbTest()
+		{
+			try
+			{
+				var giderCountEf = __db.Gider_Table.Count();
+				var giderCountSql = __db.Gider_Table.FromSqlRaw("SELECT * FROM Gider_Table").ToList().Count;
+
+				return Content($"EF Count: {giderCountEf} - RAW SQL Count: {giderCountSql}");
+			}
+			catch (Exception ex)
+			{
+				return Content("HATA: " + ex.Message);
+			}
+		}
+
+
+
+
+		//[HttpGet]
+		//public async Task<IActionResult> Index ()
+		//{
+		//	int __giderNumber = await __db.Gider_Table.CountAsync();
+
+		//	return View("Giders",__giderNumber);
+		//}
+
+		[HttpGet]
+		public IActionResult Index()
+		{
+			return View();
 		}
 
 
@@ -30,8 +71,9 @@ namespace form_task_arda.Controllers
 		}
 
 
-		[HttpPost]
 		//[Authorize(Roles = "Admin")]
+		[HttpPost]
+		[Authorize]
 		public IActionResult AddNewGider (GiderlerDTO _newGider)
 		{
 
@@ -62,7 +104,7 @@ namespace form_task_arda.Controllers
 		}
 
 		[HttpPost]
-		[Authorize(Roles = "Admin")]
+		[Authorize]
 		public IActionResult UpdateGider (GiderlerDTO updatedGider)
 		{
 
@@ -77,7 +119,7 @@ namespace form_task_arda.Controllers
 
 
 
-		[Authorize(Roles = "Admin")]
+		[Authorize]
 		public IActionResult RemoveThisGider (int _id)
 		{
 			var deletingGider = __db.Gider_Table.FirstOrDefault(e => e.Gider_Id == _id);

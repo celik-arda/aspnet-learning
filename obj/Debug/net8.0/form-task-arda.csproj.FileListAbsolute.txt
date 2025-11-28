@@ -260,6 +260,6 @@ C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\refint\form-task-arda
 C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-task-arda.pdb
 C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-task-arda.genruntimeconfig.cache
 C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\ref\form-task-arda.dll
-C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-tas.9F54B7F3.Up2Date
 C:\Users\arda-\Development\form-task-arda\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\arda-\Development\form-task-arda\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\arda-\Development\form-task-arda\obj\Debug\net8.0\form-tas.9F54B7F3.Up2Date

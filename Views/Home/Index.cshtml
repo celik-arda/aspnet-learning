@@ -1,6 +1,10 @@
-﻿@{
+﻿@using form_task_arda.Models;
+@using form_task_arda.Controllers;
+@model (int usersCount, int totalGidersPrice, int companiesCount);
+@{
     ViewData["Title"] = "Home Page";
 }
+
 
 <section class="hero_image_section">
 
@@ -12,17 +16,20 @@
 
 
 
-<section class="all_page_links_section">
+<section class="all_page_links_section container-lg mx-auto my-4">
     
-    <div class="all_page_links_container container-lg">
-        <div class="col-lg-9">
-            <img class="w-100" src="" alt="" />
+    <div class="all_page_links_container col-12 gap-3 container d-flex justify-content-between mx-auto">
+        <div class="home_boxes total_user_box col-lg-4 p-3">
+            <h2 class="mb-4">@Model.usersCount</h2>
+            <h3>Toplam kullanıcı</h3>
         </div>
-        <div class="col-lg-9">
-            <img class="w-100" src="" alt="" />
+        <div class="home_boxes total_gider_box col-lg-4 p-3">
+            <h2 class="mb-4">@Model.totalGidersPrice TL</h2>
+            <h3>Toplam Gider</h3>
         </div>
-        <div class="col-lg-9">
-            <img class="w-100" src="" alt="" />
+        <div class="home_boxes total_company_box col-lg-4 p-3">
+            <h2 class="mb-4">@Model.companiesCount</h2>
+            <h3>Tedarikçi Sayısı</h3>
         </div>
     </div>
 
