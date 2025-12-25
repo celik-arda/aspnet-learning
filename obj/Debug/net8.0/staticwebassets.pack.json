@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\proventa_icon.png"
     },
     {
+      "Id": "C:\\Users\\arda-\\Development\\form-task-arda\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
       "Id": "C:\\Users\\arda-\\Development\\form-task-arda\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

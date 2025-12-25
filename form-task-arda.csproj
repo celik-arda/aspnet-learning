@@ -26,6 +26,7 @@
 
 	<ItemGroup>
 		<None Include="wwwroot\images\proventa_icon.png" />
+		<None Include="wwwroot\js\script.js" />
 	</ItemGroup>
 
 </Project>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("form-task-arda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de395c2c232774acf0c9e07000e3685a34fba9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39d7cae8576de8c25de3d109cd03c3a36d686115")]
 [assembly: System.Reflection.AssemblyProductAttribute("form-task-arda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("form-task-arda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

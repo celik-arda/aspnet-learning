@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y0dTddszLmHXmi4kOWrskGp16uKOT5pnufvwFfCZlGU=",
+  "Hash": "CXsCy732d7/tkg0gAhCSK10X6Wbjkgmc8uHgOt7rJfA=",
   "Source": "form-task-arda",
   "BasePath": "_content/form-task-arda",
   "Mode": "Default",
@@ -1326,6 +1326,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\proventa_icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\arda-\\Development\\form-task-arda\\wwwroot\\js\\script.js",
+      "SourceId": "form-task-arda",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arda-\\Development\\form-task-arda\\wwwroot\\",
+      "BasePath": "_content/form-task-arda",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
       "Identity": "C:\\Users\\arda-\\Development\\form-task-arda\\wwwroot\\js\\site.js",
