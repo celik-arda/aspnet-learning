@@ -20,8 +20,13 @@ namespace form_task_arda.MapperProfiles
 
 			CreateMap<GiderlerDTO, GiderlerModel>()
 				.ForMember(dest => dest.Gider_Maliyeti, opt => opt.MapFrom(e => e.Gider_Ucreti));
-				//.ForMember(dest => dest.Gider_Tedarikcisi, opt => opt.Ignore());
-				//.ForMember(dest => dest.Gider_Id, opt => opt.Ignore());
+			//.ForMember(dest => dest.Gider_Tedarikcisi, opt => opt.Ignore());
+			//.ForMember(dest => dest.Gider_Id, opt => opt.Ignore());
+
+			CreateMap<AppUser, CurrentUserDto>()
+				.ForMember(dest => dest.FullName, opt => opt.MapFrom(e => e.FullName))
+				.ForMember(dest => dest.Email, opt => opt.MapFrom(e => e.Email))
+				.ForMember(dest => dest.UserName, opt => opt.MapFrom(e => e.UserName));
 		}
 	}
 }

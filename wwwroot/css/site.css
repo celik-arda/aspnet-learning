@@ -80,6 +80,12 @@ svg path {
     border-radius: 7px;
 }
 
+.profile_page_container {
+    background-color: #25282a;
+    border-radius: 7px;
+
+}
+
 .editing_popup_container {
     background-color: #25282a;
     border-radius: 7px;
@@ -232,3 +238,10 @@ section.home_graph_section {
     background-color: #25282a;
     border-radius: 7px;
 }
+
+/*@media screen and (min-width:992px) and (max-width: 1200px) {
+    
+    ::root {
+        font-size: 
+    }
+}*/

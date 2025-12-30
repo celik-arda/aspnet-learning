@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using AutoMapper;
 using form_task_arda.Models;
 using Microsoft.AspNetCore.Mvc;
 using form_task_arda.Data;
@@ -10,15 +11,17 @@ namespace form_task_arda.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		private readonly IMapper __mapper;
 
 		private readonly ApplicationDbContext __db;
 		private readonly UserManager<AppUser> __userManager;
 
-		public HomeController(ILogger<HomeController> logger, ApplicationDbContext _db, UserManager<AppUser> _userManager)
+		public HomeController(ILogger<HomeController> logger, ApplicationDbContext _db, UserManager<AppUser> _userManager, IMapper _mapper)
 		{
 			_logger = logger;
 			__db = _db;
 			__userManager = _userManager;
+			__mapper = _mapper;
 		}
 
 		public IActionResult Index()
@@ -85,35 +88,35 @@ namespace form_task_arda.Controllers
 		}
 
 
+		public async Task<IActionResult> ProfilePage ()
+		{
+
+			// BÝLGÝ: bu tarz user info'larý identity'den çektiðimde týpký register-login iþlemlerindeki gibi <AppUser> tipinde geliyor. Kafan karýþmasýn, aþaðýda modeli deðil "currentUser"	objesini dönüþtürdüm. Yoksa esas arkaplanda dönüþüm yaptýðým map iþlemi <AppUser>'ý kastediyor, onu da mapper dosyamda zaten yazdým-eþleþtirdim. Controller'da dönüþecek objeyi belirtirsin, obje tipini deðil.
+
+			var currentUser = await __userManager.GetUserAsync(User);
+
+			if(currentUser == null)
+			{
+				return RedirectToAction("Index");
+			}
+
+			else
+			{
+				var currentUserInfos = __mapper.Map<CurrentUserDto>(currentUser
+					);
+				return View(currentUserInfos);
+			}
+
+
+			//  BURADA KALDIN... MUHTEMELEN VÝEW'A GÖNDERÝRKEN SENDEN AUTOMAPPER ÝLE DTO DÖNÜÞÜMÜ ÝSTER, ÇÜNKÜ BUNUN TÝPÝ ÞUAN <APPUSER> AMA VÝEW'A REGÝSTERFORMDTO OLARAK GEÇMELÝ...  !!!  //
+
+			//return View(currentUser);
+		}
 
 
 
 
 
-		//[HttpGet]
-		//public DisplayJsonResultsOnChart ()
-		//{
-
-		//	var allMonthNames = new[] {"Ocak", "Þubat", "Mart", "Nisan", "Mayýs", "Haziran", "Temmuz", "Aðustos", "Eylül", "Ekim", "Kasým", "Aralýk"};
-
-		//	var giders_group_by_month = __db.Gider_Table
-		//		.GroupBy(e => e.Gider_Tarihi)
-		//		.Select(gider => new
-		//		{
-		//			theMonth = gider.Key,
-		//			total_monthly_gider = gider.Sum(x => x.Gider_Maliyeti)
-		//		})
-		//		.OrderBy(item => item.theMonth)
-		//		.ToList();
-
-		//	var giderDataPerMonth = new List<int>();
-
-		//	for (int i=1; i <= 12; i++)
-		//	{
-		//		var eachSingleGider = giders_group_by_month.FirstOrDefault(x => x.theMonth == i);
-		//	}
-
-		//}
 
 
 		public IActionResult Privacy()

@@ -47,16 +47,6 @@ namespace form_task_arda.Controllers
 		}
 
 
-
-
-		//[HttpGet]
-		//public async Task<IActionResult> Index ()
-		//{
-		//	int __giderNumber = await __db.Gider_Table.CountAsync();
-
-		//	return View("Giders",__giderNumber);
-		//}
-
 		[HttpGet]
 		public IActionResult Index()
 		{
@@ -84,7 +74,7 @@ namespace form_task_arda.Controllers
 			__db.Gider_Table.Add(_newGiderModel);
 			__db.SaveChanges();
 
-			return View();
+			return RedirectToAction("Giderler");
 		}
 
 
