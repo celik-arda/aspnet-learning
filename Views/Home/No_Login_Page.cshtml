@@ -1,0 +1,21 @@
+﻿@model form_task_arda.DTOs.CurrentUserDto;
+
+
+<div class="profile_page_container container col-xl-4 col-lg-4 col-10 mx-auto text-center mt-5 p-5">
+
+    <h2 class="text-primary mb-3">Hesabım</h2>
+
+    <form method="get" asp-controller="Auth" asp-action="Login_Form" class="d-flex flex-column gap-2">
+
+        <div class="form-group">
+            <h4>
+                Henüz giriş yapmadınız. Hesabınızı görüntülemek için giriş yapın.
+            </h4>
+        </div>
+        
+        <div class="bg-danger w-50 m-auto mt-3">Offline</div>       
+
+        <button type="submit" class="btn btn-success w-50 m-auto mt-3">Go to Login</button>
+
+    </form>
+</div>

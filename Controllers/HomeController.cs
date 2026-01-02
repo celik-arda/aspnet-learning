@@ -97,7 +97,7 @@ namespace form_task_arda.Controllers
 
 			if(currentUser == null)
 			{
-				return RedirectToAction("Index");
+				return RedirectToAction("No_Login_Page");
 			}
 
 			else
@@ -107,10 +107,13 @@ namespace form_task_arda.Controllers
 				return View(currentUserInfos);
 			}
 
+		}
 
-			//  BURADA KALDIN... MUHTEMELEN VÝEW'A GÖNDERÝRKEN SENDEN AUTOMAPPER ÝLE DTO DÖNÜÞÜMÜ ÝSTER, ÇÜNKÜ BUNUN TÝPÝ ÞUAN <APPUSER> AMA VÝEW'A REGÝSTERFORMDTO OLARAK GEÇMELÝ...  !!!  //
 
-			//return View(currentUser);
+		[HttpGet]
+		public IActionResult No_Login_Page()
+		{
+			return View();
 		}
 
 
